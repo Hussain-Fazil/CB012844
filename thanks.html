@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Purchase</title>
+    <link rel="stylesheet" href="thanks.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+
+    <h1>Thank You for Your Purchase!</h1>
+    <div class="message">
+        Your order has been successfully placed. Your items will be delivered on <span id="deliveryDateDisplay"></span>.
+    </div>
+    <div class="button-container">
+        <button onclick="window.location.href = 'index.html';">Go to Homepage</button>
+    </div>
+
+    <script>
+        // Display delivery date dynamically
+        const deliveryDate = new URLSearchParams(window.location.search).get('deliveryDate');
+        document.getElementById("deliveryDateDisplay").textContent = deliveryDate;
+    </script>
+
+</body>
+</html>

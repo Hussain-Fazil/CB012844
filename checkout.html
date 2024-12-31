@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Pharmacy Order</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <h1>Checkout - Pharmacy Order</h1>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="thanks.html">Thanks</a>
+    </nav>
+
+    <div class="container">
+        <!-- Order Summary Section -->
+        <div class="section order-summary">
+            <h3>Order Summary</h3>
+            <table id="checkoutCartTable">
+                <thead>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p style="text-align: right; font-weight: bold;">Grand Total: <span id="checkoutGrandTotal">0</span> LKR</p>
+        </div>
+
+        <!-- Personal Details Section -->
+        <div class="section">
+            <h3>Enter Your Details</h3>
+            <form id="checkoutForm">
+                <input type="text" id="name" placeholder="Full Name" required />
+                <input type="email" id="email" placeholder="Email Address" required />
+                <input type="text" id="address" placeholder="Delivery Address" required />
+                <input type="text" id="phone" placeholder="Phone Number" required />
+                <input type="date" id="deliveryDate" placeholder="Preferred Delivery Date" required />
+                <select id="paymentMethod" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="debit">Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+                <button type="button" onclick="completePurchase()">Complete Purchase</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>

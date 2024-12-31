@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy order System</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <h1>Quick Your Orders</h1>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="thanks.html">Thanks</a>
+    </nav>
+
+    <div class="container">
+        <!-- Medicine Sections -->
+        <div class="section">
+            <h3>Analgesics</h3>
+            <div class="medicines" id="analgesics"></div>
+        </div>
+        <div class="section">
+            <h3>Antibiotics</h3>
+            <div class="medicines" id="antibiotics"></div>
+        </div>
+        <div class="section">
+            <h3>Antidepressants</h3>
+            <div class="medicines" id="antidepressants"></div>
+        </div>
+        <div class="section">
+            <h3>Antihistamines</h3>
+            <div class="medicines" id="antihistamines"></div>
+        </div>
+        <div class="section">
+            <h3>Antihypertensives</h3>
+            <div class="medicines" id="antihypertensives"></div>
+        </div>
+
+        <!-- Cart Table -->
+        <div class="section">
+            <h3>Order Summary</h3>
+            <table id="cartTable">
+                <thead>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p style="text-align: right; font-weight: bold;">Grand Total: <span id="grandTotal">0</span> LKR</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button onclick="saveToFavourites()">Save to Favourites</button>
+            <button onclick="applyFavourites()">Apply Favourites</button>
+            <button onclick="proceedToPayment()">Buy Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
